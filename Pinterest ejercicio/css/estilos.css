@@ -1,0 +1,40 @@
+
+.container  
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: center;
+    gap: 5px;
+    /* grid-auto-flow: dense; */
+}
+
+
+
+
+
+.item {
+
+    background-color: #f2f2f2;
+    /* width: 100%; */
+    border-radius: 5px;
+    padding: 10px;
+    
+
+}
+
+.item img {
+    max-width: 100%;
+}
+
+.level-1 {
+    grid-row-end: span 1;
+    
+}
+.level-2 {
+    grid-row-end: span 2;
+
+}
+.level-3 {
+    grid-row-end: span 3;
+
+}
