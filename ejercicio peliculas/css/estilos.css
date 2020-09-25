@@ -96,6 +96,9 @@ background-color: white;
   grid-area: buscador;
   margin: 30px;
   max-width: 600px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 0 10px;
 }
 
 .platzi{
@@ -153,6 +156,12 @@ background-image: -webkit-linear-gradient(black, #0a5d00);
   font-size: 50px;
 }
 
+.icon-container:hover {
+  color: rgba(56, 58, 55, 0.6);
+  cursor: pointer;
+ 
+}
+
 
 .peliculas {
   grid-area: peliculas;
@@ -161,9 +170,15 @@ background-image: -webkit-linear-gradient(black, #0a5d00);
  
   justify-content: center;
   gap: 10px;
-  grid-template-rows: repeat(6, 50px 200px);
+  grid-template-rows: repeat(4, 50px 240px);
   grid-template-areas: "titulo-grupo1"
-                        "grupo-pelis";
+                        "grupo-pelis1"
+                        "titulo-grupo2"
+                        "grupo-pelis2"
+                        "titulo-grupo3"
+                        "grupo-pelis3"
+                        "titulo-grupo4"
+                        "grupo-pelis4";
   
 }
 
@@ -171,12 +186,56 @@ background-image: -webkit-linear-gradient(black, #0a5d00);
   grid-area: titulo-grupo1;
   padding-left: 100px;
 }
+.titulo-grupo2 {
+  grid-area: titulo-grupo2;
+  padding-left: 100px;
+}
+.titulo-grupo3 {
+  grid-area: titulo-grupo3;
+  padding-left: 100px;
+}
+.titulo-grupo4 {
+  grid-area: titulo-grupo4;
+  padding-left: 100px;
+}
 
-.grupo-pelis{
-  grid-area: grupo-pelis;
+.grupo-pelis1{
+  grid-area: grupo-pelis1;
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(6, 300px);
   justify-content: center;
+  overflow: auto;
+  margin: 10px;
+  gap: 10px;
+
+}
+.grupo-pelis2{
+  grid-area: grupo-pelis2;
+  display: grid;
+  grid-template-columns: repeat(6, 300px);
+  justify-content: center;
+  overflow: auto;
+  margin: 10px;
+  gap: 10px;
+
+}
+.grupo-pelis3{
+  grid-area: grupo-pelis3;
+  display: grid;
+  grid-template-columns: repeat(6, 300px);
+  justify-content: center;
+  overflow: auto;
+  margin: 10px;
+  gap: 10px;
+
+}
+.grupo-pelis4{
+  grid-area: grupo-pelis4;
+  display: grid;
+  grid-template-columns: repeat(6, 300px);
+  justify-content: center;
+  overflow: auto;
+  margin: 10px;
   gap: 10px;
 
 }
