@@ -156,59 +156,84 @@ background-image: -webkit-linear-gradient(black, #0a5d00);
 
 .peliculas {
   grid-area: peliculas;
-  /* background-color: #f2f2f2; */
   display: grid;
-  grid-template-rows: repeat(6, 50px 400px);
-  grid-template-areas: "titulo-grupo"
-                       "pelis-container" ;
+  grid-template-columns: 1fr;
+ 
+  justify-content: center;
+  gap: 10px;
+  grid-template-rows: repeat(6, 50px 200px);
+  grid-template-areas: "titulo-grupo1"
+                        "grupo-pelis";
+  
 }
 
-
-.peliculas figure {
-  width: 350px;
-  height: 300px;
-  border: blue solid 1px;
-  border-radius: 7px;
-  overflow: hidden;
-}
-.peliculas img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
+.titulo-grupo1 {
+  grid-area: titulo-grupo1;
+  padding-left: 100px;
 }
 
-.titulo-grupo{
-  grid-area: titulo-grupo;
+.grupo-pelis{
+  grid-area: grupo-pelis;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  gap: 10px;
+
 }
 
-.pelis-container{
-  grid-area: pelis-container;
-}
-
-.peli {
-  display: block;
+.peli{
+  /* grid-area: pelis; */
   position: relative;
-  width: 400px;
-  height: 350px;
-  border: red solid 1px
+  width: 300px;
+  height: 200px;
+  display: block; /*paar que traslade el tamaño a la imagen que contiene*/
+  
 }
 
-.peli-image {
+.peli-imagen { 
+  margin: 0;
+ width: 100%;
+ height: 100%;
+ 
   
 
 }
 
-.peli-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.peli-imagen img {
+  width: 100%;
+  height: 100%;
+ object-fit: cover;
+  vertical-align: top;  /*borra el borde en blanco que aparece abajo de la imagen*/
 }
 
+.peli-overlay {
+  background-color: rgba(10,93,0, .6) ;
+position: absolute;
+top: 70%;
+right: 0;
+bottom: 0;
+left: 0;
+display: block;
+text-align: center;
+justify-content: center;
+color:  white;
+align-items: flex-end;
+}
+
+.peli:hover .peli-overlay {
+  display: block;
+  position: absolute;
+top: 0;
+}
+
+.peli-title {
+  display: block;
+}
 
 .peli-description {
-  max-width: 350px;
-  padding: 3px;
+  display: none;
+}
+
+.peli:hover .peli-description {
+  display: block;
 }
