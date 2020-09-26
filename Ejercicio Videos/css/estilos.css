@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: black;
+    
+}
+
+.body-container {
+    max-width: 1100px;
+    margin: auto;
+    border: red solid 1px;
+    display: grid;
+    grid-template-columns: 250px 1fr;   
+    background-color: white;
+}
+
+
+.playlist {
+    background-color: #151b31;
+    padding: 15px;
+    color: white;
+    box-shadow: 2px 5px 16px 4px rgba(0, 0, 0, 0.2);
+}
+
+.playlist h1 {
+    font-size: 35px;
+    color: white;
+}
+
+.playlist h1 span {
+    background: -webkit-linear-gradient(0deg, red, rgb(107, 80, 84));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.playlist h3{
+    font-weight: 400;
+}
+
+.my-playlist li {
+    padding: 10px
+    
+}
+
+.friends {
+    margin-top: 80px;
+    display: block;
+}
+
+.friends img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.friends p {
+    display: inline;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.img-container {
+   margin-top: 20px;
+   display: flex;
+   align-items: center;
+   
+}
+
+
+.principal {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-template-areas: "video video"
+                         "detalle-video detalle-video"
+                         "comentario-container sugerencias-container"
+                         ;
+    grid-template-rows: 500px 130px 1fr;
+}
+
+
+.video {
+    grid-area: video;
+    
+
+}
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+.detalle-video {
+    grid-area: detalle-video;
+background: #e7e7f3;
+
+    padding: 0 25px;
+    box-shadow: 2px 5px 16px 4px rgba(0, 0, 0, 0.2);
+}
+
+.detalle-video h3 {
+    padding: 0;
+    /* margin-top: 0; */
+    margin-bottom: 0;
+}
+.detalle-video h4 {
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+
+
+.botones-video {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.button-container{
+    display: block;
+    margin-right: 30px;
+    
+}
+
+
+
+.botones-video button {
+    padding: 5px 15px;
+    background: -webkit-linear-gradient(0deg, red, rgb(107, 80, 84));
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botones-video button:hover {
+    background: rgba(0,0,0, .4);
+}
+
+.shaering-contaier {
+    display: flex;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 20px; */
+    margin: 0 20px;
+    cursor: pointer;
+    
+}
+.icon-container:hover {
+    color: rgba(0,0,0, .4);
+}
+
+.icon {
+    font-size: 20px;
+}
+
+
+.icon-container p {
+    margin: 0;
+}
+
+
+.tag-container {
+display: flex;
+}
+
+
+.tag { margin: 20px;
+    background: lightblue;
+    color:     #515157;
+    padding: 4px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.tag:hover {
+    background: rgba(0,0,0, .4);
+}
+
+
+.comentario-container{
+    grid-area: comentario-container;
+    padding: 30px;
+    color:     #515157;
+
+    
+}
+.comentario-container input { 
+    width: 100%;
+    border-radius: 10px;
+    background: -webkit-linear-gradient(0deg,#e7e7f3, white);
+    border: #7d7d86 1px solid;
+    padding: 10px 5px;
+}
+
+.comentario { 
+    display: flex;
+    align-items: center;
+   
+}
+
+.comentario img {
+    width: 40px;
+    border-radius: 50%;
+}
+.contenido-coment {
+    margin: 20px;
+}
+
+
+.contenido-coment p {
+    /* padding: 0 15px  ; */
+    margin: 0;
+}
+
+
+.nombre-contacto {
+    font-weight: 800;
+}
+
+
+
+
+.sugerencias-container {
+    grid-area: sugerencias-container;
+    padding: 30px 0;
+    color: #515157;
+}
+
+.titulo-sugerencia {
+
+}
+.sugerencia {
+    /* display: flex; */
+    justify-items: center;
+    text-align: center;
+    padding: 0 0 20px 0;
+}
+
+.video-sugerido {
+    width: 340px;
+    height: 190px;
+    object-fit: cover;
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+
+.video-sugerido img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+
+.sugerencia-overlay {
+ position: absolute;
+ display: none;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ color: red;
+ font-size: 50px;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+ background: rgba(0,0,0, .4);
+
+}
+.video-sugerido:hover .sugerencia-overlay{
+    display: flex;
+} 
+
+
+
